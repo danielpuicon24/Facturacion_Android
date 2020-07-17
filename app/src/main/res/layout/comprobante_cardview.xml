@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    app:cardUseCompatPadding="true"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardElevation="5dp"
+    card_view:cardCornerRadius="5dp"
+    card_view:contentPadding="5dp"
+    android:layout_height="160dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtTipoComprobanteLC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo de comprobante"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtNombreClienteComprobante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre cliente"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/txtEstadoComprobante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estado del comprobante"
+                android:textSize="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtFechaEmision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de emisión"
+                    android:textSize="12dp" />
+                <TextView
+                    android:id="@+id/txtTotalComprobante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/btnEnviarComprobante"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/btn_rect_primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enviar" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

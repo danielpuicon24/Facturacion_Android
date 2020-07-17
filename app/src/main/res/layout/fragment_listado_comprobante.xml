@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ListadoComprobanteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/spacing_middle" />
+        <Spinner
+            android:id="@+id/spCapoBusqueda"
+            style="@style/EditText.Flat.Grey"
+            android:layout_width="250dp"
+            android:layout_height="25dp"
+            android:paddingLeft="@dimen/spacing_middle"
+            android:paddingRight="@dimen/spacing_middle"
+            android:text=""
+
+            />
+
+
+        <EditText
+            android:id="@+id/txtFiltro"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:hint="Ingrese tipo de comprobante:"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnFechaBusqueda"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_rect_primary"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Fecha" />
+            <EditText
+                android:id="@+id/txtFechaBusqueda"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="true"
+                android:maxLines="1" />
+
+            <Button
+                android:id="@+id/btnFiltrar"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_rect_primary"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Filtrar" />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/srlComprobante">
+
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/comprobanteRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    tools:listitem="@layout/comprobante_cardview"></androidx.recyclerview.widget.RecyclerView>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabAgregarComprobante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_large"
+                    android:clickable="true"
+                    android:text="PRIMARY"
+                    android:tint="@android:color/white"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:layout_anchorGravity="end|bottom"
+                    app:fabSize="normal"
+                    app:rippleColor="@color/grey_5"
+                    app:layout_anchor="@+id/comprobanteRecyclerView"
+                    app:srcCompat="@drawable/ic_add" />
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
